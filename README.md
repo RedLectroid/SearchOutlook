@@ -6,4 +6,4 @@ Simply run the tool with the command "SearchOutlook [search word]" and it will s
   
  Works well with execute-assembly of various C2 frameworks like Cobalt Strike.
 
-Before compiling ad the Microsoft Office 15.0 Object Library via Project->Add Reference->COM->Microsoft Office 15.0 Object Library
+Before compiling add the Microsoft Office 15.0 Object Library via Project->Add Reference->COM->Microsoft Office 15.0 Object Library
