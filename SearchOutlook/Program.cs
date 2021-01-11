@@ -42,7 +42,7 @@ namespace SearchOutlook
                 foreach (Outlook.Folder childFolder in childFolders)
                 {
                     // We only want Inbox folders - ignore Contacts and others
-                    if (childFolder.FolderPath.Contains("Inbox"))
+                    if (childFolder.FolderPath.Contains("Inbox") || childFolder.FolderPath.Contains("Deleted"))
                     {
                         // Write the folder path.
                         Console.WriteLine("Enumerating " + childFolder.FolderPath);
