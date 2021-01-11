@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +36,7 @@ namespace SearchOutlook
         static void EnumerateFolders(Outlook.Folder folder, string search)
         {
             Outlook.Folders childFolders = folder.Folders;
-            Console.WriteLine(childFolders.Count);
+            Console.WriteLine("Folders found: "+childFolders.Count);
             if (childFolders.Count > 0)
             {
                 foreach (Outlook.Folder childFolder in childFolders)
@@ -69,14 +69,18 @@ namespace SearchOutlook
                     {
                         Outlook.MailItem mailitem = (Outlook.MailItem)item;
 
-                        string body = mailitem.Body;
+                        string body = mailitem.Body.ToLower();
 
-                        if (body.Contains(search))
+                        if (body.Contains(search.ToLower()))
                         {
                             Console.WriteLine("\n");
                             Console.WriteLine("############################################################################");
                             Console.WriteLine(body);
                             Console.WriteLine("\n");
+                        }
+                        else
+                        {
+
                         }
                     }
                 }
